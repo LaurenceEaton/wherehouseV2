@@ -1,0 +1,121 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"\" vcs=\"Git\" />\r\n    <mapping directory=\"$PROJECT_DIR$/Wherehouse app\" vcs=\"Git\" />\r\n    <mapping directory=\"$PROJECT_DIR$/repository/Wherehouse\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision b5c15976c5050718c4ef594c1bc5c6022a93c717)
++++ b/.idea/vcs.xml	(date 1698843241544)
+@@ -2,7 +2,5 @@
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+     <mapping directory="" vcs="Git" />
+-    <mapping directory="$PROJECT_DIR$/Wherehouse app" vcs="Git" />
+-    <mapping directory="$PROJECT_DIR$/repository/Wherehouse" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>distributionBase=GRADLE_USER_HOME\r\ndistributionPath=wrapper/dists\r\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-7.5.1-bin.zip\r\nzipStoreBase=GRADLE_USER_HOME\r\nzipStorePath=wrapper/dists\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties
+--- a/gradle/wrapper/gradle-wrapper.properties	(revision b5c15976c5050718c4ef594c1bc5c6022a93c717)
++++ b/gradle/wrapper/gradle-wrapper.properties	(date 1692524079294)
+@@ -1,5 +1,6 @@
++#Tue Aug 08 09:32:31 BST 2023
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip
++distributionUrl=https\://services.gradle.org/distributions/gradle-8.0-bin.zip
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+Index: build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nplugins {\r\n    id(\"com.android.application\")\r\n    id(\"org.jetbrains.kotlin.android\")\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.example.wherehouse\"\r\n    compileSdk = 33\r\n\r\n    defaultConfig {\r\n        applicationId = \"com.example.wherehouse\"\r\n        minSdk = 24\r\n        targetSdk = 33\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_1_8\r\n        targetCompatibility = JavaVersion.VERSION_1_8\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = \"1.8\"\r\n    }\r\n}\r\n\r\nbuildscript {\r\n    dependencies {\r\n        classpath 'com.android.tools.build:gradle:8.1.0'\r\n    }\r\n    configurations.all {\r\n        resolutionStrategy {\r\n            eachDependency { details ->\r\n                if (details.requested.group == 'com.android.tools.build' && details.requested.name == 'gradle') {\r\n                    details.useVersion('8.0')\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n\r\ndependencies {\r\n    implementation(\"com.squareup.okhttp3:okhttp:4.11.0\")\r\n    implementation(\"androidx.core:core-ktx:1.9.0\")\r\n    implementation(\"androidx.appcompat:appcompat:1.6.1\")\r\n    implementation(\"com.google.android.material:material:1.9.0\")\r\n    implementation(\"androidx.constraintlayout:constraintlayout:2.1.4\")\r\n    testImplementation(\"junit:junit:4.13.2\")\r\n    androidTestImplementation(\"androidx.test.ext:junit:1.1.5\")\r\n    androidTestImplementation(\"androidx.test.espresso:espresso-core:3.5.1\")\r\n    implementation(\"com.journeyapps:zxing-android-embedded:4.2.0\")\r\n    implementation(\"mysql:mysql-connector-java:8.0.27\")\r\n    implementation(\"com.google.code.gson:gson:2.8.8\")\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle.kts b/build.gradle.kts
+--- a/build.gradle.kts	(revision b5c15976c5050718c4ef594c1bc5c6022a93c717)
++++ b/build.gradle.kts	(date 1692481125006)
+@@ -1,69 +1,5 @@
+-
++// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ plugins {
+-    id("com.android.application")
+-    id("org.jetbrains.kotlin.android")
+-}
+-
+-android {
+-    namespace = "com.example.wherehouse"
+-    compileSdk = 33
+-
+-    defaultConfig {
+-        applicationId = "com.example.wherehouse"
+-        minSdk = 24
+-        targetSdk = 33
+-        versionCode = 1
+-        versionName = "1.0"
+-
+-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+-    }
+-
+-    buildTypes {
+-        release {
+-            isMinifyEnabled = false
+-            proguardFiles(
+-                getDefaultProguardFile("proguard-android-optimize.txt"),
+-                "proguard-rules.pro"
+-            )
+-        }
+-    }
+-    compileOptions {
+-        sourceCompatibility = JavaVersion.VERSION_1_8
+-        targetCompatibility = JavaVersion.VERSION_1_8
+-    }
+-    kotlinOptions {
+-        jvmTarget = "1.8"
+-    }
+-}
+-
+-buildscript {
+-    dependencies {
+-        classpath 'com.android.tools.build:gradle:8.1.0'
+-    }
+-    configurations.all {
+-        resolutionStrategy {
+-            eachDependency { details ->
+-                if (details.requested.group == 'com.android.tools.build' && details.requested.name == 'gradle') {
+-                    details.useVersion('8.0')
+-                }
+-            }
+-        }
+-    }
+-}
+-
+-
+-dependencies {
+-    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+-    implementation("androidx.core:core-ktx:1.9.0")
+-    implementation("androidx.appcompat:appcompat:1.6.1")
+-    implementation("com.google.android.material:material:1.9.0")
+-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+-    testImplementation("junit:junit:4.13.2")
+-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+-    implementation("com.journeyapps:zxing-android-embedded:4.2.0")
+-    implementation("mysql:mysql-connector-java:8.0.27")
+-    implementation("com.google.code.gson:gson:2.8.8")
+-
+-
++    id("com.android.application") version "8.1.0" apply false
++    id("org.jetbrains.kotlin.android") version "1.8.0" apply false
+ }
+\ No newline at end of file

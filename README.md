@@ -1,1 +1,2 @@
-# wherehouseV2
+# Wherehouse
+Wherehouse android application

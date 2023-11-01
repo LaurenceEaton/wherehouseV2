@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.wherehouse">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Wherehouse"
+        tools:targetApi="31">
+
+        <activity
+            android:name="com.example.wherehouse.UserLogin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.wherehouse.MainMenu">
+        </activity>
+
+        <activity
+            android:name="com.example.wherehouse.ViewStock"
+            android:label="View Stock">
+        </activity>
+
+        <activity
+            android:name="com.example.wherehouse.EditStock"
+            android:label="Edit Stock">
+        </activity>
+
+        <activity
+            android:name="com.example.wherehouse.ItemWithdrawals"
+            android:label="Item Withdrawals">
+        </activity>
+
+        <activity
+            android:name="com.example.wherehouse.ItemDeposits"
+            android:label="Item Deposits">
+        </activity>
+
+        <activity
+            android:name="com.example.wherehouse.CycleCounting"
+            android:label="Cycle Counting">
+        </activity>
+
+        <activity
+            android:name="com.example.wherehouse.AddNewItemTypeToStock"
+            android:label="Add New Item Type to Stock">
+        </activity>
+
+        <activity
+            android:name="com.example.wherehouse.StockPrediction"
+            android:label="Stock Prediction">
+        </activity>
+
+
+    </application>
+
+</manifest>

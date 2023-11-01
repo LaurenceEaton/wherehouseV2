@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="237dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Wherehouse"
+        android:textSize="35sp" />
+    <Button
+        android:id="@+id/viewStockButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="-5dp"
+        android:onClick="openviewStockActivity"
+        android:text="View Stock" />
+    <Button
+        android:id="@+id/editStockButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/viewStockButton"
+        android:layout_marginTop="-1dp"
+        android:onClick="openeditStockActivity"
+        android:text="Edit Stock" />
+    <Button
+        android:id="@+id/itemWithdrawalsButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/editStockButton"
+        android:layout_marginTop="-1dp"
+        android:onClick="openitemWithdrawalsActivity"
+        android:text="Item Withdrawals" />
+    <Button
+        android:id="@+id/itemDepositsButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/itemWithdrawalsButton"
+        android:layout_marginTop="-1dp"
+        android:onClick="openitemDepositsActivity"
+        android:text="Item Deposits" />
+    <Button
+        android:id="@+id/cycleCountingButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/itemDepositsButton"
+        android:layout_marginTop="-1dp"
+        android:onClick="opencycleCountingActivity"
+        android:text="Cycle Counting" />
+    <Button
+        android:id="@+id/addNewItemTypeToStockButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/cycleCountingButton"
+        android:layout_marginTop="-1dp"
+        android:onClick="openaddNewItemTypeToStockActivity"
+        android:text="Add New Item Type To Stock" />
+    <Button
+        android:id="@+id/stockPredictionButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/addNewItemTypeToStockButton"
+        android:layout_marginTop="-1dp"
+        android:onClick="openstockPredictionActivity"
+        android:text="Stock Prediction" />
+
+</RelativeLayout>

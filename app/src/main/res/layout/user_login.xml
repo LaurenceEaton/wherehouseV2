@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserLogin">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="237dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Wherehouse"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:layout_centerInParent="true"
+        android:background="@android:drawable/ic_menu_camera"
+        android:outlineProvider="none" />
+
+    <EditText
+        android:id="@+id/barcodeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cameraButton"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter work ID"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="176dp"
+        android:layout_height="67dp"
+        android:layout_below="@id/barcodeEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/footerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laurence Eaton"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>
